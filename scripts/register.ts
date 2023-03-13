@@ -20,7 +20,8 @@ const main = async () => {
     console.log("Signer Address:", await ethSigner.getAddress());
 
     // Initialize the signer for L2
-    const starkPrivateKey = await generateLegacyStarkPrivateKey(ethSigner);
+    const starkPrivateKey =
+        process.env.STARK_PRIVATE_KEY || "000000000000000000000000000000000000000000000000000000000000000";
     const starkSigner = createStarkSigner(starkPrivateKey);
 
     // Initialize the ImmutableX Core SDK
