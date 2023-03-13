@@ -6,7 +6,8 @@
     "author": "vladimir@fr0ntierx.com",
     "license": "MIT",
     "scripts": {
-        "register": "ts-node -r dotenv/config ./scripts/register.ts"
+        "register": "ts-node -r dotenv/config ./scripts/register.ts",
+        "generate-stark-key": "ts-node -r dotenv/config ./scripts/generate-stark-key.ts"
     },
     "dependencies": {
         "@imtbl/core-sdk": "^1.0.1",
